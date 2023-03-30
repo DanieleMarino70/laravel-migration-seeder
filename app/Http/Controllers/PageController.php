@@ -13,6 +13,6 @@ class PageController extends Controller
 
     public function list_trains()
     {
-        return view('homepage');
+        return view('list_trains');
     }
 }
