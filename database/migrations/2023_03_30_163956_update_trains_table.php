@@ -14,13 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->string('departure station', 30);
-            $table->string('arrival station', 30);
-            $table->dateTime('departure time');
-            $table->dateTime('arrival time');
-            $table->string('train code', 20);
-            $table->unsignedSmallInteger("wagon's number");
-            $table->boolean('in time');
+            $table->string('departure_station', 30);
+            $table->string('arrival_station', 30);
+            $table->dateTime('departure_time');
+            $table->dateTime('arrival_time');
+            $table->string('train_code', 20);
+            $table->unsignedSmallInteger("wagons_number");
+            $table->boolean('in_time');
             $table->boolean('canceled');
         });
     }
@@ -33,13 +33,13 @@ return new class extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn('departure station');
-            $table->dropColumn('arrival station');
-            $table->dropColumn('departure time');
-            $table->dropColumn('arrival time');
-            $table->dropColumn('train code');
-            $table->dropColumn("wagon's number");
-            $table->dropColumn('in time');
+            $table->dropColumn('departure_station');
+            $table->dropColumn('arrival_station');
+            $table->dropColumn('departure_time');
+            $table->dropColumn('arrival_time');
+            $table->dropColumn('train_code');
+            $table->dropColumn("wagons_number");
+            $table->dropColumn('in_time');
             $table->dropColumn('canceled');
         });
     }
